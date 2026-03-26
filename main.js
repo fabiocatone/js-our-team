@@ -47,8 +47,8 @@ for (let i = 0; i < teamMembers.length; i++) {
 
     const markup = `
      <div class=" d-flex p-2 mb-1 card bg-black col-4 row">
-        <img src = "${img}" alt = "..." class"col-4" >
-            <div class="card-body col-8">
+    <img src = "${img}" alt = "...">
+            <div class="card-body">
                 <h2 class= "text-light" id="nameMember"> ${name} </h2>
                 <p id="role" class="text-light"> ${role} </p>
                 <p id="email" class="card-text text-info"> ${email}</p>
@@ -66,9 +66,9 @@ const formEl = document.querySelector("form")
 formEl.addEventListener("submit", function(event) {
     event.preventDefault()
     const newmarkup = `
-<div class="card  my-2 bg-black row">
-        <img src = "img/foto.jpeg" alt = "..." >
-            <div class="card-body">
+ <div class=" d-flex p-2 mb-1 card bg-black col-4 row">
+        <img src = "img/foto.jpeg" alt = "..."  class"col-4">
+            <div class="card-body col-8">
                 <h2 class= "text-light" id="nameMember"> ${newName.value} </h2>
                 <p id="role" class="text-light"> ${newRole.value} </p>
                 <p id="email" class="card-text text-info"> ${newMail.value}</p>
