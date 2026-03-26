@@ -57,6 +57,30 @@ for (let i = 0; i < teamMembers.length; i++) {
             cardEl.innerHTML += markup
 }
 
+const newName = document.getElementById("newName")
+const newRole = document.getElementById("newRole")
+const newMail = document.getElementById("newMail")
+const buttonEl = document.getElementById("btn")
+const formEl = document.querySelector("form")
+
+formEl.addEventListener("submit", function(event) {
+    event.preventDefault()
+    const newmarkup = `
+<div class="card col-4 my-2 bg-black" style="width: 12rem;">
+        <img src = "img/foto.jpeg" alt = "..." >
+            <div class="card-body">
+                <h2 class= "text-light" id="nameMember"> ${newName.value} </h2>
+                <p id="role" class="text-light"> ${newRole.value} </p>
+                <p id="email" class="card-text text-info"> ${newMail.value}</p>
+            </div> </div> `   
+            
+            cardEl.innerHTML += newmarkup
+
+
+})
+
+
+
             
 
 
