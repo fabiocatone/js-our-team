@@ -39,6 +39,9 @@ const teamMembers = [
 
 const cardEl = document.getElementById("cardSection")
 
+const ulEl = document.querySelector("ul")
+
+
 
 
 for (let i = 0; i < teamMembers.length; i++) {
@@ -55,6 +58,9 @@ for (let i = 0; i < teamMembers.length; i++) {
             </div> </div> `
     
             cardEl.innerHTML += markup
+            const liEl=document.createElement("li")
+            liEl.innerText = member.name
+            ulEl.appendChild(liEl)
 }
 
 const newName = document.getElementById("newName")
